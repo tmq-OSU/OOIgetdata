@@ -3,8 +3,8 @@ import re
 import xarray as xr
 import os
 import time
-
-def get_data(url,bad_inst=''):
+# what was in get_data , bad_inst=''
+def get_data(url):
   '''Function to grab all data from specified directory'''
   tds_url = 'https://opendap.oceanobservatories.org/thredds/dodsC'
   datasets = requests.get(url).text
