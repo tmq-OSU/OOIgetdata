@@ -21,14 +21,14 @@ def get_data(url,bad_inst=''):
   datasets = [os.path.join(tds_url, i) for i in x]
   
   # Remove extraneous files if necessary
-  selected_datasets = []
-  for d in datasets:
-    if (bad_inst) and bad_inst in d:
-      pass
-    elif 'ENG000' in d: #Remove engineering streams for gliders
-      pass
-    else:
-      selected_datasets.append(d)
+  #selected_datasets = []
+  #for d in datasets:
+    #if (bad_inst) and bad_inst in d:
+     # pass
+   # elif 'ENG000' in d: #Remove engineering streams for gliders
+ #     pass
+#    else:
+#      selected_datasets.append(d)
 #   print(selected_datasets)
   
   # Load in dataset
