@@ -6,7 +6,7 @@ import time
 # what was in get_data , bad_inst=''
 def get_data(url):
   '''Function to grab all data from specified directory'''
-  tds_url = 'https://opendap.oceanobservatories.org/thredds/dodsC'
+  tds_url = 'https://opendap-west.oceanobservatories.org/thredds/dodsC'
   datasets = requests.get(url).text
   urls = re.findall(r'href=[\'"]?([^\'" >]+)', datasets)
   x = re.findall(r'(ooi/.*?.nc)', datasets)
@@ -87,12 +87,12 @@ def list_thredds_datasets(catalog_url,pattern_str='',append_str='',tds_url=None)
     pattern_str - string containing a pattern that must be in the dataset name (default '')
     append_str - string that will be appended to the end of each filename (default '')
     tds_url - the base OpenDAP url for the datasets
-              (default: https://opendap.oceanobservatories.org/thredds/dodsC)
+              (default: https://opendap-west.oceanobservatories.org/thredds/dodsC)
     """
 
     # set default tds_url if none provided
     if tds_url is None:
-        tds_url = 'https://opendap.oceanobservatories.org/thredds/dodsC'
+        tds_url = 'https://opendap-west.oceanobservatories.org/thredds/dodsC'
 
     # parse datasets in catalog
     datasets = requests.get(catalog_url).text
